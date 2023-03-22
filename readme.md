@@ -10,12 +10,7 @@
     - [Further Scope of Improvement](#further-scope-of-improvement)
   - [Steps to Install](#steps-to-install)
     - [Clone to local](#clone-to-local)
-    - [Start local blockchain](#start-local-blockchain)
-    - [Deploy the smart contract to your local network](#deploy-the-smart-contract-to-your-local-network)
-    - [Add Hardhat to your metamask networks](#add-hardhat-to-your-metamask-networks)
-      - [Steps](#steps)
-    - [Add accounts to Metamask](#add-accounts-to-metamask)
-      - [Steps](#steps-1)
+    - [Deploy the smart contract to Mumbai Testnet](#deploy-the-smart-contract-to-mumbai-testnet)
     - [Run the Relayer](#run-the-relayer)
     - [Run the app](#run-the-app)
 
@@ -75,86 +70,27 @@ git clone <REPO-URL>
 cd submission
 ```
 
-### Start local blockchain
+### Deploy the smart contract to Mumbai Testnet
 
 ---
 
-```bash
-cd hardhat
-npm i
-npx hardhat node
-```
-
-- a local development blockchain will run on http://127.0.0.1:8545/
-- also you will get a list of all available accounts and their private keys
-
-> IMPORTANT: your local network needs to run the whole time. Else the App won't function.
-
-### Deploy the smart contract to your local network
-
----
-
-Open another terminal window and switch to the hardhat folder to Run the deploy sript :
+Open a terminal window and switch to the hardhat folder to Run the deploy script :
 
 ```bash
 cd hardhat
-npx hardhat run --network localhost scripts/deploy.ts
+npx hardhat run --network polygon_mumbai scripts/deploy.ts
 ```
 
 Now the smart contract has been deployed.
 
-The following hardhat provided addresses are seeded with 10,000 tokens of deployed permit enabled ERC20 tokens: TokenA and TokenB to play around from the Front-end
+The following hardhat provided address is seeded with 100 tokens of deployed permit enabled ERC20 tokens: TokenA and TokenB to play around from the Front-end
 
-```js
-0x2546bcd3c84621e976d8185a91a922ae77ecec30,
-  0xbda5747bfd65f08deb54cb465eb87d40e51b197e,
-  0xdd2fd4581271e230360230f9337d5c0430bf44c0;
-```
+> Address:
+> 0x0B950D128F6a33651257F95cbAF59c02b7F6019F
+>
+> Private-key: 215aba83903d0bd8c3a81e59cea7143f27f009f247194207114eb150b471b9ea
 
-### Add Hardhat to your metamask networks
-
----
-
-The second step to interact with your local development blockchain is to add it to your list of networks.
-
-#### Steps
-
-- click the circle in the top right again
-- click on settings
-- click on Networks
-- click on Add Network
-- Add Network name: Hardhat local
-- New RPC URL: http://127.0.0.1:8545/
-- ChainId: 1337
-
-Now Metamask can connect to your local Network.
-
-> Make sure, that you are on the Hardhat local network when using the app.
-
-### Add accounts to Metamask
-
----
-
-To interact with your local Blockchain you need the airdropped accounts.
-
-#### Steps
-
-- go to Metamask in the browser
-- click the round circle in the top right
-- click on import account
-- copy one/all of the private keys (provided below) from the airdropped accounts (Account#16, Account#17, Account#18) and paste it into Metamask
-- hit import
-
-```js
-Account #16: 0x2546BcD3c84621e976D8185a91A922aE77ECEc30 (10000 ETH)
-Private Key: 0xea6c44ac03bff858b476bba40716402b03e41b8e97e276d1baec7c37d42484a0
-
-Account #17: 0xbDA5747bFD65F08deb54cb465eB87D40e51B197E (10000 ETH)
-Private Key: 0x689af8efa8c651a91ad287602527f3af2fe9f6501a7ac4b061667b5a93e037fd
-
-Account #18: 0xdD2FD4581271e230360230F9337D5c0430Bf44C0 (10000 ETH)
-Private Key: 0xde9be858da4a475276426320d5e9262ecfc3ba460bfac56360bfa6c4c28b4ee0
-```
+> Make sure, that you are on the Mumbai test network when using the app.
 
 ### Run the Relayer
 

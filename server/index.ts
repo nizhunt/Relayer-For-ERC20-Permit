@@ -7,10 +7,10 @@ import { ethers } from "ethers";
 
 // Should be hidden in production
 const PRIVATE_KEY =
-  "0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e";
+  "215aba83903d0bd8c3a81e59cea7143f27f009f247194207114eb150b471b9ea";
 
 // create Wallet from private key and connect to Hardhat local network
-const provider = ethers.getDefaultProvider("http://localhost:8545");
+const provider = ethers.getDefaultProvider("https://rpc-mumbai.maticvigil.com");
 const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
 const forwarderContract = new ethers.Contract(Forwarder, ForwarderAbi, wallet);
 const interval = 30000;

@@ -19,12 +19,12 @@ const address_json_1 = require("./contracts/address.json");
 const cors_1 = __importDefault(require("cors"));
 const ethers_1 = require("ethers");
 // Should be hidden in production
-const PRIVATE_KEY = "0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e";
+const PRIVATE_KEY = "215aba83903d0bd8c3a81e59cea7143f27f009f247194207114eb150b471b9ea";
 // create Wallet from private key and connect to Hardhat local network
-const provider = ethers_1.ethers.getDefaultProvider("http://localhost:8545");
+const provider = ethers_1.ethers.getDefaultProvider("https://rpc-mumbai.maticvigil.com");
 const wallet = new ethers_1.ethers.Wallet(PRIVATE_KEY, provider);
 const forwarderContract = new ethers_1.ethers.Contract(address_json_1.Forwarder, Forwarder_json_1.default, wallet);
-const interval = 15000;
+const interval = 30000;
 let paymentInputs = [];
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({

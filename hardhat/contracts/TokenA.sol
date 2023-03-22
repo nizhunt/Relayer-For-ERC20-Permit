@@ -7,14 +7,8 @@ import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 
 contract TokenA is ERC20, Ownable, ERC20Permit {
     constructor() ERC20("TokenA", "TA") ERC20Permit("TokenA") {
-        address[3] memory airdrop = [
-            0x2546BcD3c84621e976D8185a91A922aE77ECEc30,
-            0xbDA5747bFD65F08deb54cb465eB87D40e51B197E,
-            0xdD2FD4581271e230360230F9337D5c0430Bf44C0
-        ];
-        for (uint i = 0; i < airdrop.length; i++) {
-            _mint(airdrop[i], 100 * 10 ** decimals());
-        }
+        address airdrop = 0x0B950D128F6a33651257F95cbAF59c02b7F6019F;
+        _mint(airdrop, 100 * 10 ** decimals());
     }
 
     function mint(address to, uint256 value) public onlyOwner {

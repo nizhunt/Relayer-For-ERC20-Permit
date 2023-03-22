@@ -35,7 +35,7 @@ const Send = ({ state, isConnected }) => {
     }
 
     if (!canSend) {
-      alert("Token not available on the network");
+      alert("Token not supported");
     } else {
       const token = new ethers.Contract(tokenAddress, tokenABI, state.signer);
       const forwarder = new ethers.Contract(
