@@ -83,7 +83,7 @@ npx hardhat run --network polygon_mumbai scripts/deploy.ts
 
 Now the smart contract has been deployed.
 
-The following hardhat provided address is seeded with 100 tokens of deployed permit enabled ERC20 tokens: TokenA and TokenB to play around from the Front-end
+The following hardhat provided address is seeded with 100 tokens of deployed permit enabled ERC20 tokens: TokenA and TokenB and some extra test matics to play around from the Front-end
 
 > Address:
 > 0x0B950D128F6a33651257F95cbAF59c02b7F6019F
