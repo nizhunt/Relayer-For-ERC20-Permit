@@ -1,6 +1,6 @@
-# AutoMata Task - Simple Relayer
+# Simple Relayer
 
-- [AutoMata Task - Simple Relayer](#automata-task---simple-relayer)
+
   - [Introduction](#introduction)
     - [Features](#features)
     - [Flow](#flow)
